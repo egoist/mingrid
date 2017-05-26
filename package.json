@@ -1,6 +1,6 @@
 {
   "name": "mingrid",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Grid system from Milligram.",
   "repository": {
     "url": "egoist/mingrid",
