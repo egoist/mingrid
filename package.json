@@ -1,0 +1,32 @@
+{
+  "name": "mingrid",
+  "version": "0.0.0",
+  "description": "Grid system from Milligram.",
+  "repository": {
+    "url": "egoist/mingrid",
+    "type": "git"
+  },
+  "main": "dist/mingrid.css",
+  "unpkg": "dist/mingrid.min.css",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "npm run build",
+    "build": "npm run sass && npm run postcss",
+    "sass": "node-sass --output-style expanded ./node_modules/milligram/src/_Grid.sass dist/mingrid.css && node-sass --output-style compressed ./node_modules/milligram/src/_Grid.sass dist/mingrid.min.css",
+    "postcss": "postcss -u autoprefixer --no-map.inline -r dist/*.css"
+  },
+  "browserslist": [
+    "last 1 version"
+  ],
+  "author": "egoist <0x142857@gmail.com>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^7.1.1",
+    "milligram": "^1.3.0",
+    "node-sass": "^4.5.3",
+    "postcss": "^6.0.1"
+  }
+}
